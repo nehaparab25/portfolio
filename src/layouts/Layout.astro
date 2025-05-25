@@ -4,6 +4,7 @@ import "@fontsource/be-vietnam-pro";
 import "@fontsource-variable/gabarito";
 import { SITE_CONFIG } from "@config";
 import Footer from "@components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 
 const {
   title,
@@ -44,6 +45,9 @@ const ogImgUrl = canonicalURL + socialImage;
   </head>
   <body class="bg-black font-sans">
     <Header siteLogo={siteLogo} navLinks={navLinks} />
+    <header style="display: flex; justify-content: flex-end; align-items: center; padding: 1.5rem;">
+      <ThemeToggle />
+    </header>
     <main class="mx-auto max-w-3xl px-5">
       <slot />
     </main>

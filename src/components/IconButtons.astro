@@ -1,0 +1,64 @@
+---
+// filepath: src/components/IconButtons.astro
+---
+<style>
+.icon-buttons {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  transition: color 0.2s, transform 0.15s;
+  color: #a259ff; /* Set text color to purple for inline SVGs */
+  font-size: 1.8rem;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+.icon-btn img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  /* Make SVG icons purple using filter */
+  filter: invert(32%) sepia(93%) saturate(7496%) hue-rotate(238deg) brightness(95%) contrast(101%);
+  transition: filter 0.2s, transform 0.15s;
+}
+
+.icon-btn:hover img,
+.icon-btn:focus img {
+  filter: drop-shadow(0 0 6px #a259ff)
+    invert(32%) sepia(93%) saturate(7496%) hue-rotate(238deg) brightness(80%) contrast(120%);
+  transform: translateY(-2px) scale(1.12);
+}
+</style>
+
+<div class="icon-buttons">
+  <a class="icon-btn" href="https://github.com/nehaparab25" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <img src="/github.svg" alt="GitHub" />
+  </a>
+  <a class="icon-btn" href="https://linkedin.com/in/nehaparab25" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <img src="/linkedin.svg" alt="LinkedIn" />
+  </a>
+  <a class="icon-btn" href="https://x.com/nehaparab25" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+    <img src="/twitter.svg" alt="X (Twitter)" />
+  </a>
+  <a class="icon-btn" href="https://instagram.com/unscriptedneha" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <img src="/instagram.svg" alt="Instagram" />
+  </a>
+  <a class="icon-btn" href="mailto:nehaparab881@gmail.com" aria-label="Email">
+    <img src="/mail.svg" alt="Email" />
+  </a>
+</div>
